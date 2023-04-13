@@ -83,3 +83,19 @@ _____________________________________________
 
 12 min a max teplota = 
 MIN(data[minimalni_teplota]) &" / "&MAX(data[maximalni_teplota])
+
+__________________________________________________________
+
+13 podil srazek = 
+
+
+-- suma srazek v danem roce, mesici, lokalite
+SUM(data[srazky])
+-- DELENO
+//
+-- suma srazek v danem roce, lokalite, napric mesici
+/
+SUMX(FILTER(ALL(data),
+data[rok] = SELECTEDVALUE(data[rok])
+&& data[lokalita] = SELECTEDVALUE(data[lokalita])),
+data[srazky])
