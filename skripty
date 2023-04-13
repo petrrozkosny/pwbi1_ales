@@ -77,3 +77,9 @@ SUMX(
     data[rok] = MAX(data[rok])
     && data[mesic] <= MAX(data[mesic])),
 data[srazky])
+
+
+_____________________________________________
+
+12 min a max teplota = 
+MIN(data[minimalni_teplota]) &" / "&MAX(data[maximalni_teplota])
