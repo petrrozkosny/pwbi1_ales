@@ -68,3 +68,12 @@ SUMX(
        all(data),
     data[rok] = MINX(all(data),data[rok])),
 data[srazky])
+________________________________________________
+
+07 kumulativni srazky rok = 
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] = MAX(data[rok])
+    && data[mesic] <= MAX(data[mesic])),
+data[srazky])
