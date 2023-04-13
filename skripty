@@ -55,3 +55,7 @@ SUMX(
 data[srazky])
 
 _______________________________
+
+05 suma srazek predchozi rok = 
+
+SUMX(FILTER(ALL(data),data[rok]=MAX(data[rok]) - 1),data[srazky])
