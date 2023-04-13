@@ -59,3 +59,12 @@ _______________________________
 05 suma srazek predchozi rok = 
 
 SUMX(FILTER(ALL(data),data[rok]=MAX(data[rok]) - 1),data[srazky])
+
+________________________________________________________________
+
+06 suma srazek minimalni rok = 
+SUMX(
+    FILTER(
+       all(data),
+    data[rok] = MINX(all(data),data[rok])),
+data[srazky])
