@@ -166,3 +166,19 @@ MINX(
         ALL(data),
     data[rok] = SELECTEDVALUE(data[rok])),
 data[datum])
+
+________________________________________________________
+
+21 mezirocni srazky = 
+
+-- suma srazek v danem roce, mesici
+SUM(data[srazky])
+-- MÍNUS
+-
+-- suma srazek v danem mesici, predchozim roce
+SUMX(
+    FILTER(
+        ALL(data),
+    data[rok] = SELECTEDVALUE(data[rok]) - 1
+    && data[mesic] = SELECTEDVALUE(data[mesic])),
+data[srazky])
