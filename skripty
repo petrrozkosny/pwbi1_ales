@@ -149,6 +149,17 @@ AVERAGEX(
   
   17 nazev grafu = "Vyvoj prumernych maximalnich teplot v lokalite "&SELECTEDVALUE(data[lokalita])
 
+___________________________________________
+
+18 maximalni teplota = 
+
+IF(MAX(data[maximalni_teplota])
+=
+MAXX(
+FILTER(ALL(data),
+data[mesic] = SELECTEDVALUE(data[mesic])
+&&data[lokalita] = SELECTEDVALUE(data[lokalita])),
+data[maximalni_teplota]),"GOLD")
 _________________________________________
 
 19 minimalni datum v roce = 
