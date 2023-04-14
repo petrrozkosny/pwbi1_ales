@@ -182,3 +182,17 @@ SUMX(
     data[rok] = SELECTEDVALUE(data[rok]) - 1
     && data[mesic] = SELECTEDVALUE(data[mesic])),
 data[srazky])
+
+__________________________________
+
+22 nejteplejsi mesic roku = 
+IF(
+-- maximalni teplota v danem roce, mesici
+MAX(data[maximalni_teplota])
+=
+-- maximalni teplota v danem roce, napric mesici
+MAXX(
+    FILTER(
+        ALL(data),
+    data[rok] = SELECTEDVALUE(data[rok])),
+data[maximalni_teplota]),"ANO","NE")
