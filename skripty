@@ -157,3 +157,12 @@ MINX(
         ALL(data),
     data[rok] = SELECTEDVALUE(data[rok])),
 data[datum])
+
+_____________________________________________________
+
+19 minimalni datum v roce = 
+MINX(
+    FILTER(
+        ALL(data),
+    data[rok] = SELECTEDVALUE(data[rok])),
+data[datum])
