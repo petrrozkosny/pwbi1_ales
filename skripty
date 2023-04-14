@@ -78,6 +78,27 @@ SUMX(
     && data[mesic] <= MAX(data[mesic])),
 data[srazky])
 
+__________________________________________________
+
+08 minimalni datum = min(data[datum])
+_________________________________________________
+09 minimalni datum sedmy mesic = 
+
+MINX(
+    FILTER(data,data[mesic] = 7),data[datum])
+    
+________________________________________________
+10 minimalni datum ruzyne = 
+minx(FILTER(data,data[lokalita] = "RUZYNE"),data[datum])
+
+______________________________________________
+
+11 prvni datum maximalnich srazek v danem roce = 
+IF(ISFILTERED(data[rok]),
+MINX(
+    FILTER(data,
+    data[srazky] = MAX(data[srazky])),
+data[datum]),BLANK())
 
 _____________________________________________
 
