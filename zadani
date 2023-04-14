@@ -1,0 +1,16 @@
+23 minimalni datum: minimální datum v daném roce, měsíci
+24 minimalni datum ruzyne: minimální datum v daném roce, měsíci, lokalitě RUZYNE
+25 minimalni datum prselo: minimální datum v daném roce, měsíci, kdy srazky >0
+_________________________________________________________________________________
+
+26 maximalni srazky : maximalni srazky v danem mesici, roce
+27 pocet dnu max srazek: pocet dnu, ve kterem napadly maximalni srazky v danem mesici, roce
+28 maximalni srazky ruzyne: maximalni srazky v danem mesici, roce, lokalite RUZYNE
+
+BONUS: 
+29 pocet dnu max srazek ruzyne: počet nejdeštivějších dnů ruzyně v daném roce a měsíci
+_________________________________________________________________________________
+
+30. kumulativni srazky ruzyne: kumulativní suma srážek v daném roce pro lokalitu RUZYNE
+31. kumulativni srazky ruzyne predchozi rok: kumulativní suma srážek v předchozím roce
+v lokalite RUZYNE
