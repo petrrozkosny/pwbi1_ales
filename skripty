@@ -148,3 +148,12 @@ AVERAGEX(
   _______________________
   
   17 nazev grafu = "Vyvoj prumernych maximalnich teplot v lokalite "&SELECTEDVALUE(data[lokalita])
+
+_________________________________________
+
+19 minimalni datum v roce = 
+MINX(
+    FILTER(
+        ALL(data),
+    data[rok] = SELECTEDVALUE(data[rok])),
+data[datum])
