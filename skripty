@@ -120,3 +120,31 @@ SUMX(FILTER(ALL(data),
 data[rok] = SELECTEDVALUE(data[rok])
 && data[lokalita] = SELECTEDVALUE(data[lokalita])),
 data[srazky])
+___________________________________________
+14 prumerna teplota rok lokalita = 
+-- maximum ze sloupce maximalni_teplota
+
+AVERAGE(data[maximalni_teplota])
+
+__________________________________
+
+15 prumerna teplota predchozi rok = 
+
+AVERAGEX(
+FILTER(
+    ALL(data),
+    data[lokalita] = SELECTEDVALUE(data[lokalita])
+    && data[rok] = SELECTEDVALUE(data[rok])- 1),
+data[maximalni_teplota])
+
+________________________________________
+
+16 prumerna teplota lokalita = 
+AVERAGEX(
+    FILTER(
+    ALL(data),
+    data[lokalita] = SELECTEDVALUE(data[lokalita])),
+    data[maximalni_teplota])
+  _______________________
+  
+  17 nazev grafu = "Vyvoj prumernych maximalnich teplot v lokalite "&SELECTEDVALUE(data[lokalita])
