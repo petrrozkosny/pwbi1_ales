@@ -196,3 +196,22 @@ MAXX(
         ALL(data),
     data[rok] = SELECTEDVALUE(data[rok])),
 data[maximalni_teplota]),"ANO","NE")
+
+_______________________________________
+23 minimalni datum = 
+min(data[datum])
+
+_______________________________________
+
+24 minimalni datum ruzyne = 
+MINX(
+    FILTER(data,data[lokalita] = "ruzyne")
+,data[datum])
+
+___________________________________________
+
+25 minimalni datum prselo = 
+MINX(
+    FILTER(data,data[srazky] >0)
+,data[datum])
+
