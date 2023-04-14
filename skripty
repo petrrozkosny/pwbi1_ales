@@ -215,3 +215,17 @@ MINX(
     FILTER(data,data[srazky] >0)
 ,data[datum])
 
+________________________________________________
+32 formatovani max teplota = 
+IF(
+-- max maximalni_teplota v danem roce, lokalite
+MAX(data[maximalni_teplota])
+=
+-- max maximalni_teplota napric roky, v lokalite
+MAXX(
+    FILTER(
+        ALL(data),
+    data[lokalita] = SELECTEDVALUE(data[lokalita])),
+data[maximalni_teplota]),
+"TOMATO")
+
